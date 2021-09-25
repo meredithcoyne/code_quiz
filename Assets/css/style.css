@@ -1,0 +1,163 @@
+body {
+  background: color #f2f2f2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #313740;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #3290a6;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+a:hover {
+  color: #99B8BF;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+span {
+  font-family: 'Archivo', sans-serif;
+  font-style: italic, bold;
+}
+
+p {
+  font-family: 'Archivo', sans-serif;
+}
+
+footer {
+  /* css so footer is at bottom of viewport */
+  flex-shrink: 0;
+  font-size: .5rem;
+}
+
+/* class */
+.score {
+
+}
+
+.timer {
+  float:right;
+}
+
+.mainBody {
+  align-content: center;
+margin: 20%;
+margin-top: 10%;
+margin-bottom:10%;
+
+}
+
+.wrapper {
+  
+}
+
+.start {
+  
+}
+
+.button {
+  background-color: Purple; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.choice{
+  
+}
+
+.hide {
+  display: none;
+}
+
+.feedbackHide {
+  
+}
+
+
+
+/* id */
+#time {
+
+}
+
+#quizTitle {
+  text-align: center;
+}
+
+#instructions {
+  font-size: 20px;
+}
+
+#startScreen {
+  display:inline-block;
+}
+
+#start {
+
+}
+
+#question{
+
+}
+
+#questionTitle {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+#choice{
+
+}
+
+#endScreen{
+
+}
+
+#allDone{
+
+}
+
+#finalScore {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+#initial{
+
+}
+
+#submit{
+
+}
+
+#feedback{
+
+}
+
+
+
+#button:focus,
+#button:active,
+#button:visited {
+  outline: none;
+  box-shadow: 2px;
+  background-color: #5a636b;
+}
+
+#answerCheck {
+  font-style: italic;
+  color: #4D5159;
+}

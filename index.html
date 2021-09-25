@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="css\style.css" />
-    <title>Code Quiz</title>
-  </head>
 
-  <body>
-    <div class="scores"><a href="highscores.html">View High Scores</a></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="Assets\css\style.css" />
+  <title>Code Quiz</title>
+</head>
 
-    <div class="timer">
-      Time:
-      <span id="time"></span>
+<body>
+  <!-- Top Row that stays visible all game -->
+  <!-- High Scores - pull from a separet html doc -->
+  <header class="score"><a href="highscores.html">View High Scores</a></div>
+  <div class="timer">
+    ⏱️Time:
+    <span id="time"></span>
+  </div>
+  </header>
+
+<main class = "mainBody">
+  <div class="wrapper">
+    <div id="startScreen" class="start">
+      <h1 id=quizTitle>Javascript Quiz</h1>
+      <p id = instructions>
+        Let's test your knowledge on JavaScript fundamentals! Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+      </p>
+      <button id="start" class = "button">Start Quiz</button>
     </div>
 
-    <div class="wrapper">
-      <div id="startScreen" class="start">
-        <h1>Javascript Quiz</h1>
-        <p>
-          Try to answer the following Dragon Ball related questions within the
-          time limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds!
-        </p>
-        <button id="start">Start Quiz</button>
-      </div>
-
-      <div id="questions">
-        <h2 id="questionTitle"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2 id="All Done!"></h2>
-        <p>
-          Your final score is
-          <span id="final-score"></span>
-        </p>
-        <p>
-          Enter initials:
-          <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-      <div id="feedback" class="feedback hide"></div>
+    <div id="question">
+      <h2 id="questionTitle"></h2>
+      <div id="choice" class="choice"></div>
     </div>
-    <script src="js\questions.js"></script>
-    <script src="js\logic.js"></script>
-  </body>
+
+    <div id="endScreen" class="hide">
+      <h2 id="allDone!"></h2>
+      <p>
+        Your final score is
+        <span id="finalScore"></span>
+      </p>
+      <p>
+        Enter initials:
+        <input type="text" id="initials" max="3" />
+        <button id="submit" class = "button">Submit</button>
+      </p>
+    </div>
+    <div id="feedback" class="feedbackHide"></div>
+  </div>
+</main>
+  <script src="Assets\js\questions.js"></script>
+  <script src="Assets\js\logic.js"></script>
+</body>
+
 </html>
