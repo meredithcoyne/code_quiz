@@ -92,15 +92,10 @@ footer {
 }
 
 .choice{
-  
-  display: inline-block;
   float: left;
   clear: left;
-  background-color: var(--multipleChoice);
   color: white;
-  padding: 5px 20px;
   text-align: center;
-  display: inline-block;
   font-size: 15px;
   border-radius:5px;
 }
@@ -178,14 +173,6 @@ footer {
 }
 
 
-
-#button:focus,
-#button:active,
-#button:visited {
-  outline: none;
-  box-shadow: 2px;
-  background-color: #5a636b;
-}
 
 #answerCheck {
   font-style: italic;

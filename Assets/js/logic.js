@@ -7,23 +7,27 @@ var startButton = document.querySelector('#start');
 var questionElement = document.querySelector('#question');
 var timerElement = document.querySelector('#timer');
 var questionChoices = document.querySelector('#choice');
-
+var startScreen = document.querySelector("#startScreen");
+var currentQuestion = question[currentQuestionIndex];
+var titleElement = document.querySelector("#questionTitle");
 
 //Start Quiz
 function startQuiz() {
     //Hide Start Screen
-    var startScreen = document.querySelector("#startScreen");
-    startScreen.setAttribute("class", "hide")
+    
+    startScreen.style.display = "none";
+    showQuestions ();
 
     //Show questions
     questionElement.removeAttribute("class");
-    getCurrentQuestion();
-}
+    showQuestions();
 
-function getCurrentQuestion() {
-    var currentQuestion = question[currentQuestionIndex];
+
+
+function showQuestions() {
+    
     console.log(currentQuestion);
-    var titleElement = document.querySelector("#questionTitle");
+    
     titleElement.textContent = currentQuestion.title
     questionChoices.textContent = "";
 
@@ -35,6 +39,8 @@ function getCurrentQuestion() {
       choices.textContent = i + 1 + "." + currentQuestion.choice[i];
       questionChoices.appendChild(choices);
     }
+}
+
 }
 
 
