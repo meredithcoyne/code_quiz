@@ -1,5 +1,5 @@
 // Var with array and object for questions 
-var questions = [
+var question = [
     {
         title: "The hashtag symbol is technically called an ________.",
         choices: ["Pound Sign", "Octofield", "Octothorpe", "Number Sign"],
