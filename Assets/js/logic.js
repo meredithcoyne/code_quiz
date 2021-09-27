@@ -65,7 +65,7 @@ var timer = document.querySelector("#startTime");
 var questionDiv = document.querySelector("#questionDiv");
 var wrapper = document.querySelector("#wrapper");
 
-var secondsLeft = 76;
+var secondsLeft = 60;
 var holdInterval = 0;
 var penalty = 10;
 var ulCreate = document.createElement("ul");
@@ -123,7 +123,7 @@ function compare(event) {
             createDiv.textContent = "Correct! The answer is:  " + question[questionIndex].answer;
             // Correct condition 
         } else {
-            // Will deduct -10 seconds off secondsLeft for wrong answers
+            // Will deduct -10 seconds off secondsLeft for wrong answer
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + question[questionIndex].answer;
         }
