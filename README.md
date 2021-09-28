@@ -1,12 +1,12 @@
 # Code Quiz
 
-This is a timed coding quiz with multiple-choice questions. This app is written from scratch. 
+This is a timed coding quiz with multiple-choice questions. This app is written from scratch in HTML, CSS, and Javascript. 
 
 ## Instructions
 1. Click "Start Quiz"
    * Timer on the top right will start to run
-   * Total time is 60 second with 10 possible questions  to go through.
-   * The "View High Scores" link on the top left will direct the user to view all current high scores
+   * Total time is 75 second with 10 possible questions  to go through.
+   * The "View High Scores" link on the top left will direct the user to view all current high scores on a separate page.
 
 
 2. A series of questions are presented with multiple choice answers
@@ -26,7 +26,7 @@ This is a timed coding quiz with multiple-choice questions. This app is written 
 * HTML
 * CSS
 * JavaScript
-* Bootstrap
+
 
 ## Demo
 ![Code Quiz Demo](Assets\codeQuiz.gif)
