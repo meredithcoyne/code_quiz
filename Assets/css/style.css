@@ -26,7 +26,7 @@ body {
   top: 20%;
   width: 500px;
   height: 350px;
-  border: 5px solid var(--DarkBlue);
+ 
   position: absolute;
 
 }
@@ -38,10 +38,6 @@ body {
   color: var(--OffWhite);
 }
 
-#questionDiv {
-  margin: 20px;
-
-}
 
 #time {
   font-size: 25px;
@@ -86,7 +82,11 @@ textarea {
   margin: 20px;
 }
 
-#Submit {
+#initial{
+  font-size: 10px;
+}
+
+#submit {
   background-color: purple;
   margin-left: 33%;
   padding: 15px 32px;
@@ -105,6 +105,13 @@ input {
 
 h1 {
   text-align: center;
+  text-decoration: underline black ;
+}
+
+#questionDiv {
+  font-size: 15px;
+  font-weight:bold;
+  margin: 20px
 }
 
 li {
@@ -114,8 +121,9 @@ li {
   width: 80%;
   font-size: 18px;
   border-radius: 5px;
+  font-weight: bold;
   box-shadow: 0 3px 5px gray;
-  border: 5px  black;
+  border: 2px solid black;
 }
 
 #createDiv {
