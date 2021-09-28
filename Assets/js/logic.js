@@ -1,6 +1,5 @@
 // Var with array and object for questions 
-var question = [
-    {
+var question = [{
         title: "The hashtag symbol is technically called an ________.",
         choices: ["Pound Sign", "Octofield", "Octothorpe", "Number Sign"],
         answer: "Octothorpe"
@@ -64,7 +63,7 @@ var timer = document.querySelector("#startTime");
 var questionDiv = document.querySelector("#questionDiv");
 var wrapper = document.querySelector("#wrapper");
 
-// Seconds left is 15 seconds per question:
+
 var secondsLeft = 75;
 // Holds interval time
 var holdInterval = 0;
@@ -170,7 +169,7 @@ function allDone() {
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
-        
+
         questionDiv.appendChild(createP2);
     }
 
@@ -192,10 +191,14 @@ function allDone() {
     // submit
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
-    createSubmit.setAttribute("id", "Submit");
+    createSubmit.setAttribute("id", "submit");
     createSubmit.textContent = "Submit";
 
     questionDiv.appendChild(createSubmit);
+
+        
+
+
 
     // Event listener to capture initials and local storage for initials and score
     createSubmit.addEventListener("click", function () {
@@ -223,6 +226,6 @@ function allDone() {
             // Travels to final page
             window.location.replace("/highscores.html");
         }
-    });
 
+    });
 }
