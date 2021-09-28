@@ -29,7 +29,7 @@ This is a timed coding quiz with multiple-choice questions. This app is written 
 * Bootstrap
 
 ## Demo
-![Code Quiz Demo](assets\codeQuiz.gif)
+![Code Quiz Demo](Assets\codeQuiz.gif)
 
 
 ## Websites
