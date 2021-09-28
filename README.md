@@ -33,5 +33,5 @@ This is a timed coding quiz with multiple-choice questions. This app is written 
 
 
 ## Websites
-* Github: 
-* Deployed:
+* Github: https://github.com/meredithcoyne/code_quiz
+* Deployed: https://meredithcoyne.github.io/code_quiz/
