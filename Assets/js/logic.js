@@ -53,34 +53,33 @@ var question = [
 
 ];
 
-
-
-
 // Declared variables
 var score = 0;
 var questionIndex = 0;
 
-var currentTime = document.querySelector("#currentTime");
+// Start working code 
+// Declared variables
+var currentTime = document.querySelector("#time");
 var timer = document.querySelector("#startTime");
 var questionDiv = document.querySelector("#questionDiv");
 var wrapper = document.querySelector("#wrapper");
 
-var secondsLeft = 60;
+// Seconds left is 15 seconds per question:
+var secondsLeft = 75;
+// Holds interval time
 var holdInterval = 0;
+// Holds penalty time
 var penalty = 10;
+// Creates new element
 var ulCreate = document.createElement("ul");
 
-var userQuestion = question[questionIndex].title;
-var userChoices = question[questionIndex].choices;
-var listItem = document.createElement("li");
-
-// shows user time on screen when timer button is clicked.
+// Triggers timer on button, shows user a display on the screen
 timer.addEventListener("click", function () {
-    // Timer starts as zero
+    // We are checking zero because its originally set to zero
     if (holdInterval === 0) {
         holdInterval = setInterval(function () {
             secondsLeft--;
-            currentTime.textContent = "Time: " + secondsLeft;
+            currentTime.textContent = "⏱️Time: " + secondsLeft;
 
             if (secondsLeft <= 0) {
                 clearInterval(holdInterval);
@@ -100,19 +99,24 @@ function render(questionIndex) {
     // For loops to loop through all info in array
     for (var i = 0; i < question.length; i++) {
         // Appends question title only
+        var userQuestion = question[questionIndex].title;
+        var userChoices = question[questionIndex].choices;
         questionDiv.textContent = userQuestion;
     }
-    // New for each question choices
+    // New for each for question choices
     userChoices.forEach(function (newItem) {
+        var listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionDiv.appendChild(ulCreate);
         ulCreate.appendChild(listItem);
         listItem.addEventListener("click", (compare));
     })
 }
+
 // Event to compare choices with answer
 function compare(event) {
     var element = event.target;
+
     if (element.matches("li")) {
 
         var createDiv = document.createElement("div");
@@ -123,7 +127,7 @@ function compare(event) {
             createDiv.textContent = "Correct! The answer is:  " + question[questionIndex].answer;
             // Correct condition 
         } else {
-            // Will deduct -10 seconds off secondsLeft for wrong answer
+            // Will deduct -5 seconds off secondsLeft for wrong answers
             secondsLeft = secondsLeft - penalty;
             createDiv.textContent = "Wrong! The correct answer is:  " + question[questionIndex].answer;
         }
@@ -131,6 +135,7 @@ function compare(event) {
     }
     // Question Index determines number question user is on
     questionIndex++;
+
     if (questionIndex >= question.length) {
         // All done will append last page with user stats
         allDone();
@@ -165,7 +170,7 @@ function allDone() {
         var createP2 = document.createElement("p");
         clearInterval(holdInterval);
         createP.textContent = "Your final score is: " + timeRemaining;
-
+        
         questionDiv.appendChild(createP2);
     }
 
@@ -216,7 +221,7 @@ function allDone() {
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
             // Travels to final page
-            window.location.replace("./HighScores.html");
+            window.location.replace("/highscores.html");
         }
     });
 

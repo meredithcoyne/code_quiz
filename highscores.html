@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <!-- This is a wrapper -->
-    <div id="wrapper">
-        <!-- Div for timer -->
-        <div id="currentTime"></div>
+ 
+    <!-- Top Row that stays visible all game -->
+    <!-- High Scores - pull from a separate html doc -->
+    <header class="highScore"><a href="highscores.html">View High Scores</a></div>
+        <div id="currentTimer">⏱️Time:<span id="time"></span></div>
+    </header>
+       
         <!-- Div for quiz content -->
         <div id="questionDiv">
             <h1>High Scores</h1>
@@ -23,9 +26,9 @@
             <button id="goBack">Go Back</button>
             <button id="clear" value="reset">Clear High Score</button>
         </div>
-    </div>
-    <script src="assets\js\logic.js"></script>
-    <script src="assets\js\highscores.js"></script>
+
+        <script src="assets\js\logic.js"></script>
+        <script src="assets\js\highscores.js"></script>
 </body>
 
 </html>
